@@ -1,0 +1,102 @@
+---
+title: Avoid Gmail's Spam Folder
+description: Practical steps to improve inbox placement in Gmail, adapted from Resend’s guidance.
+banner: assets/banner-avoiding-spam.png
+---
+
+Improve inbox placement in Gmail with a clear, trust-first approach. This guide consolidates practical steps adapted from Gmail’s recommendations and Resend’s knowledge base.
+
+Source: [Resend — How do I avoid Gmail's spam folder?](https://resend.com/docs/knowledge-base/how-do-i-avoid-gmails-spam-folder)
+
+---
+
+## Authenticate Your Email
+
+Email authentication proves messages are truly from you and haven’t been forged. SPF and DKIM are the baseline; DMARC and BIMI strengthen trust and branding.
+
+| Authentication | Requires Setup | Purpose |
+| -------------- | -------------- | ------- |
+| SPF            | No             | Proves you are allowed to send from this domain |
+| DKIM           | No             | Proves your email originated from you |
+| DMARC          | Yes            | Proves you own the domain and instructs how to handle spoofs |
+| BIMI           | Yes            | Proves you are the brand you say you are |
+
+Action items:
+1. Set up DMARC for your domain.
+2. Set up BIMI for your domain.
+
+---
+
+## Legitimize Your Domain
+
+Gmail evaluates your domain to understand who you are. Align your sending domain with your website and ensure your domain isn’t flagged as unsafe.
+
+Action items:
+1. Host your website at the same domain you send from (especially for new domains).
+2. Regularly check if your domain is listed as unsafe with Google Safe Browsing.
+
+---
+
+## Manage Your Mailing List
+
+Gmail uses recipient engagement (opens, clicks, replies) to gauge whether people want your emails. Focus on consented, active recipients and remove risky addresses. Tracking pixels/links can sometimes hurt placement; prioritize list quality.
+
+Prevent sending to recipients who:
+- Didn’t ask to be sent to (no opt-in).
+- Show no signs of engagement with your emails or product.
+- Requested to be unsubscribed.
+- Marked your emails as spam (complained).
+- Never received your email (bounced).
+
+Action items:
+1. Make it easy to opt out (include Unsubscribe headers).
+2. Use webhooks to remove bounced or complained recipients from your list.
+3. Use Gmail’s Postmaster Tool to monitor spam reports.
+
+---
+
+## Monitor Affiliate Marketers
+
+Affiliates can help growth, but spammy affiliates can damage your sender reputation. If your brand is associated with spam, your other messages may be filtered.
+
+Action item:
+1. Regularly audit affiliates and remove any that send spam.
+
+---
+
+## Make Content People Want to Read
+
+Build trust in the message itself. Keep emails simple, honest, and aligned with your brand and domain.
+
+Guidelines:
+- Less is more — keep copy focused and clear.
+- Prefer plain text over complex HTML where possible.
+- Make links visible and use your sending domain.
+- Avoid hidden or manipulative content.
+
+Action items:
+1. Reduce and simplify email content.
+2. Ensure links use and reflect your sending domain.
+
+---
+
+## Establish Sending Patterns
+
+New domains lack history, so start small and warm up gradually. Segment by use case so Gmail can route appropriately (Primary, Promotions, etc.).
+
+Address examples:
+- Personal emails: `name@domain.com` (e.g., marissa@domain.com)
+- Transactional emails: `notifications@domain.com`
+- Marketing emails: `updates@domain.com`
+
+Action items:
+1. Send regular person-to-person emails from your Gmail account before bulk sending.
+2. Send transactional emails before marketing emails.
+3. Use dedicated sending addresses for each email type.
+
+---
+
+## Summary
+
+Think: what would a phisher do? Then do the opposite. Prove legitimacy at every step — authenticate, align domains, respect consent, monitor affiliates, send valuable content, and ramp volume gradually. This is how you earn and keep the inbox.
+
